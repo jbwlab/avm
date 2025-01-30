@@ -1,21 +1,10 @@
-provider "azurerm" {
-  features {}
+resource "random_pet" "unique_name" {
+  length    = 2
+  separator = "-"
 }
 
-terraform {
-  required_version = "~> 1.9"
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = ">= 3.71"
-    }
-    http = {
-      source  = "hashicorp/http"
-      version = "~> 3.4"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.5"
-    }
-  }
+resource "azurerm_resource_group" "this" {
+  location = var.location
+  name     = local.resource_group_name
+  tags     = var.tags
 }
