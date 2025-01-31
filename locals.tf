@@ -4,4 +4,5 @@ locals {
 
   resource_group_name          = "rg-demo-${local.unique_postfix}"
   log_analytics_workspace_name = "law-demo-${local.unique_postfix}"
+  storage_account_name         = replace("stdemo${local.unique_postfix}", "-", "")
 }
