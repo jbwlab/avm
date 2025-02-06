@@ -16,3 +16,7 @@ variable "env" {
     error_message = "El valor debe ser 'dev', 'pre' o 'pro'."
   }
 }
+
+variable "pepe" {}
+
+variable "resource_groups" {}
