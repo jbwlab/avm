@@ -20,9 +20,3 @@ variable "env" {
 variable "pepe" {}
 
 variable "resource_groups" {}
-
-variable "test3" {}
-
-variable "develop2" {}
-
-variable "main" {}
