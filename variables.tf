@@ -20,3 +20,5 @@ variable "env" {
 variable "pepe" {}
 
 variable "resource_groups" {}
+
+variable "test2" {}
