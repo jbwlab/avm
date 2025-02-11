@@ -21,4 +21,6 @@ variable "pepe" {}
 
 variable "resource_groups" {}
 
-variable "test2" {}
+variable "test3" {}
+
+variable "develop" {}
