@@ -23,6 +23,6 @@ variable "resource_groups" {}
 
 variable "test3" {}
 
-variable "develop" {}
+variable "develop2" {}
 
 variable "main" {}
