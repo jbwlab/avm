@@ -12,4 +12,6 @@ module "private_dns_zone_key_vault" {
   }
 
   tags = var.tags
+
+  depends_on = [module.virtual_network.id]
 }

@@ -19,3 +19,5 @@ variable "tags" {
 
 variable "diagnostic_settings" {}
 variable "tenant_id" {}
+variable "private_dns_zone_resource_ids" {}
+variable "subnet_resource_id" {}

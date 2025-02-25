@@ -26,3 +26,6 @@ variable "subnets" {
   }))
   description = "The subnets"
 }
+
+# variable "private_dns_zone_resource_ids" {}
+# variable "subnet_resource_id" {}

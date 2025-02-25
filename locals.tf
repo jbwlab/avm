@@ -9,6 +9,8 @@ locals {
   nat_gateway_name             = "natgw-demo-${local.unique_postfix}"
   nat_public_ip_name           = "natpip-demo-${local.unique_postfix}"
   key_vault_name               = "kv-demo-${format("%.16s", local.unique_postfix)}"
+  #private_dns_zone_resource_ids = module.private_dns_zone_key_vault.resource_id
+  #subnet_resource_id            = module.virtual_network.subnets["private_endpoints"].resource_id
 }
 
 # Calculate the CIDR for the subnets
