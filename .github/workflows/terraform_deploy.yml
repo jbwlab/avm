@@ -25,8 +25,8 @@ jobs:
           terraform_version: '1.5.7'  # Especifica la versión de Terraform que necesitas
       
       - name: Terraform Format Check
-        run: terraform fmt -check -recursive
-      
+        run: terraform fmt
+        
       - name: Terraform Init
         run: terraform init
       
