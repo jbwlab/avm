@@ -20,7 +20,7 @@ terraform {
   # }
 }
 
-
+#az ad sp create-for-rbac --name "iac_deployment" --role contributor --scopes /subscriptions/8d5d976b-d18a-405b-b99b-e3ea7a51c5e0 --sdk-auth
 
 provider "azurerm" {
   features {

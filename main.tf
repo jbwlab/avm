@@ -18,3 +18,17 @@ module "log_analytics_workspace" {
   resource_group_name = module.resource_group.name
   tags                = var.tags
 }
+
+
+module "key_vault" {
+  source                        = "./modules/keyvault"
+  name                          = local.key_vault_name
+  location                      = var.location
+  resource_group_name           = module.resource_group.name
+  tags                          = var.tags
+  diagnostic_settings           = local.diagnostic_settings
+  tenant_id                     = data.azurerm_client_config.current.tenant_id
+  private_dns_zone_resource_ids = [module.private_dns_zone_key_vault.resource_id]
+  subnet_resource_id            = module.virtual_network.subnets["private_endpoints"].resource_id
+  depends_on = [ module.private_dns_zone_key_vault , module.virtual_network]
+}
