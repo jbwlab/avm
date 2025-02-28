@@ -4,12 +4,12 @@ variable "location" {
 }
 
 variable "resource_group_name" {
-  type        = string
+  type = string
 }
 
-variable "name"{
-    type = string
-    default = "prueba"
+variable "name" {
+  type    = string
+  default = "prueba"
 }
 
 variable "tags" {

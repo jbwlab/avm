@@ -30,5 +30,5 @@ module "key_vault" {
   tenant_id                     = data.azurerm_client_config.current.tenant_id
   private_dns_zone_resource_ids = [module.private_dns_zone_key_vault.resource_id]
   subnet_resource_id            = module.virtual_network.subnets["private_endpoints"].resource_id
-  depends_on = [ module.private_dns_zone_key_vault , module.virtual_network]
+  depends_on                    = [module.private_dns_zone_key_vault, module.virtual_network]
 }
